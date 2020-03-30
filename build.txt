@@ -1,6 +1,6 @@
-﻿displayName = Ezfic
-author = null
-version = 0.0.0.1
+﻿displayName = EzficMod
+author = E神真粉
+version = 0.1001
 hideResources = true
 hideCode = true
 includeSource = false
