@@ -1,0 +1,9 @@
+﻿displayName = Ezfic
+author = null
+version = 0.0.0.1
+hideResources = true
+hideCode = true
+includeSource = false
+includePDB = false
+homepage = 
+buildIgnore = *.csproj, *.sln, obj\*, bin\*, *.suo, *.user, .git\*, .vs\*
