@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using Terraria;
@@ -36,9 +36,17 @@ namespace Ezfic
             Main.logo2Texture = GetTexture("logo2");
             Main.versionNumber = "Cheateria V1.4";
             Main.versionNumber2 = "Cheateria";
+            Main.itemTexture[197] = GetTexture("Textureinstead/Item_197");
             SetLang("LegacyMenu.12", "单人作弊");
             SetLang("LegacyMenu.13", "多人作弊");
             SetLang("LegacyInterface.50", "试一下你");
+            SetLang("NPCName.SkeletronHead", "这是个难的过分的Boss");
+            SetLang("NPCName.SkeletronHand", "手");
+            SetLang("Achievements.FISH_OUT_OF_WATER_Description", "打败猪龙鱼公爵，记得使用铁轨，不然会死的很快。");
+            SetLang("Achievements.BONED_Name", "骷髅之星星炮");
+            SetLang("Achievements.BONED_Description", "打败骷髅王，这是个难的过分的Boss，不过手没了就好了，可以庄心躲骷髅，记得用星星炮，别说你没有史莱姆王。");
+            SetLang("Achievements.OBTAIN_HAMMER_Name", "停！EZ时间到！");
+            SetLang("Achievements.OBTAIN_HAMMER_Description", "制作一把实锤，并用它实锤Ningishu以获得金钱，知名度，热度。");
         }
         public override void PostUpdateEverything()
         {
