@@ -40,8 +40,8 @@ namespace Ezfic
             SetLang("LegacyMenu.12", "单人作弊");
             SetLang("LegacyMenu.13", "多人作弊");
             SetLang("LegacyInterface.50", "试一下你");
-            SetLang("NPCName.SkeletronHead", "这是个难的过分的Boss");
-            SetLang("NPCName.SkeletronHand", "手");
+            //SetLang("NPCName.SkeletronHead", "这是个难的过分的Boss");
+            //SetLang("NPCName.SkeletronHand", "手");
             SetLang("Achievements.FISH_OUT_OF_WATER_Description", "打败猪龙鱼公爵，记得使用铁轨，不然会死的很快。");
             SetLang("Achievements.BONED_Name", "骷髅之星星炮");
             SetLang("Achievements.BONED_Description", "打败骷髅王，这是个难的过分的Boss，不过手没了就好了，可以庄心躲骷髅，记得用星星炮，别说你没有史莱姆王。");
@@ -62,6 +62,18 @@ namespace Ezfic
             //alphaForm.ShowDialog();
             //new Main();
         }
+        public override void PostDrawInterface(SpriteBatch spriteBatch)
+        {
+            Player player = Main.LocalPlayer;
+            string talk = player.GetModPlayer<EzficPlayer>().nowSaying;
+            float v = GetStringLength(Main.fontMouseText, talk, 0.8f);
+            if (player.GetModPlayer<EzficPlayer>().talkActive > 0)
+            {
+                Terraria.Utils.DrawBorderStringFourWay(spriteBatch, Main.fontMouseText, talk, (player.Center.X - Main.screenPosition.X) / Main.UIScale - (0.5f * v * Main.GameZoomTarget), (player.position.Y - Main.screenPosition.Y) / Main.UIScale - (30 * Main.GameZoomTarget),
+                new Color(Main.mouseTextColor, Main.mouseTextColor, Main.mouseTextColor, Main.mouseTextColor),
+                Color.Black, new Vector2(0, 0), 0.8f * Main.GameZoomTarget);
+            }
+        }
         public static bool SetLang(string key, string text)
         {
             FieldInfo alphaInfo = typeof(LanguageManager).GetField("_localizedTexts", BindingFlags.NonPublic | BindingFlags.Instance);
@@ -77,6 +89,18 @@ namespace Ezfic
                 return true;
             }
             return false;
+        }
+        public static float GetStringLength(DynamicSpriteFont font, string text, float scale)
+        {
+            return font.MeasureString(text).X * scale;
+        }
+        public static float GetStringHeight(DynamicSpriteFont font, string text, float scale)
+        {
+            return font.MeasureString(text).Y * scale;
+        }
+        public static Vector2 GetStringSize(DynamicSpriteFont font, string text, float scale)
+        {
+            return font.MeasureString(text) * scale;
         }
     }
 }
