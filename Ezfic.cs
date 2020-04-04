@@ -70,6 +70,7 @@ namespace Ezfic
             Main.logo2Texture = logo2;
             Form alphaForm = new Form();
             alphaForm.Text = "实锤你尝试卸载此mod!不过mod确实已被你卸载。(你或许没有卸载？谁在乎呢)";
+            Main.instance.Window.Title = "实锤你尝试卸载此mod!不过mod确实已被你卸载。(你或许没有卸载？谁在乎呢)";
             alphaForm.Size = new System.Drawing.Size(1500, 20);
             //alphaForm.ShowDialog();
             //new Main();
