@@ -37,11 +37,23 @@ namespace Ezfic
             Main.versionNumber = "Cheateria V1.4";
             Main.versionNumber2 = "Cheateria";
             Main.itemTexture[197] = GetTexture("Textureinstead/Item_197");
+           /* Main.npcTexture[35] = GetTexture("Textureinstead/NPC_35");
+            Main.npcTexture[36] = GetTexture("Textureinstead/NPC_36");
+            Main.NPCLoaded[35] = true;
+            Main.NPCLoaded[36] = true;
+            Main.goreTexture[54] = GetTexture("Textureinstead/Gore_54");
+            Main.goreTexture[55] = GetTexture("Textureinstead/Gore_55");
+            Main.goreTexture[56] = GetTexture("Textureinstead/Gore_56");
+            Main.goreTexture[57] = GetTexture("Textureinstead/Gore_57");
+            Main.goreLoaded[54] = true;
+            Main.goreLoaded[55] = true;
+            Main.goreLoaded[56] = true;
+            Main.goreLoaded[57] = true;*/
             SetLang("LegacyMenu.12", "单人作弊");
             SetLang("LegacyMenu.13", "多人作弊");
             SetLang("LegacyInterface.50", "试一下你");
-            //SetLang("NPCName.SkeletronHead", "这是个难的过分的Boss");
-            //SetLang("NPCName.SkeletronHand", "手");
+            SetLang("NPCName.SkeletronHead", "这是个难的过分的Boss");
+            SetLang("NPCName.SkeletronHand", "手");
             SetLang("Achievements.FISH_OUT_OF_WATER_Description", "打败猪龙鱼公爵，记得使用铁轨，不然会死的很快。");
             SetLang("Achievements.BONED_Name", "骷髅之星星炮");
             SetLang("Achievements.BONED_Description", "打败骷髅王，这是个难的过分的Boss，不过手没了就好了，可以庄心躲骷髅，记得用星星炮，别说你没有史莱姆王。");
