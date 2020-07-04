@@ -16,10 +16,11 @@ using Microsoft.Xna.Framework.Graphics;
 using System.Windows;
 using System.Windows.Forms;
 using System.Reflection;
+using System.Linq;
 
 namespace Ezfic
 {
-    public class Ezfic: Mod
+    public class Ezfic : Mod//2020.7.4正式停更，后浪们冲冲冲！
     {
         public static Mod mod;
         static Texture2D logo1;
@@ -34,10 +35,10 @@ namespace Ezfic
             logo2 = Main.logo2Texture;
             Main.logoTexture = GetTexture("logo1");
             Main.logo2Texture = GetTexture("logo2");
-            Main.versionNumber = "Cheateria V1.4";
-            Main.versionNumber2 = "Cheateria";
+            Main.versionNumber = "EZFIC！！！";
+            Main.versionNumber2 = "EZFIC！！！";
             Main.itemTexture[197] = GetTexture("Textureinstead/Item_197");
-           /* Main.npcTexture[35] = GetTexture("Textureinstead/NPC_35");
+            Main.npcTexture[35] = GetTexture("Textureinstead/NPC_35");
             Main.npcTexture[36] = GetTexture("Textureinstead/NPC_36");
             Main.NPCLoaded[35] = true;
             Main.NPCLoaded[36] = true;
@@ -48,21 +49,23 @@ namespace Ezfic
             Main.goreLoaded[54] = true;
             Main.goreLoaded[55] = true;
             Main.goreLoaded[56] = true;
-            Main.goreLoaded[57] = true;*/
+            Main.goreLoaded[57] = true;
             SetLang("LegacyMenu.12", "单人作弊");
             SetLang("LegacyMenu.13", "多人作弊");
             SetLang("LegacyInterface.50", "试一下你");
-            SetLang("NPCName.SkeletronHead", "这是个难的过分的Boss");
+            //SetLang("NPCName.SkeletronHead", "这是个难的过分的Boss");
             SetLang("NPCName.SkeletronHand", "手");
             SetLang("Achievements.FISH_OUT_OF_WATER_Description", "打败猪龙鱼公爵，记得使用铁轨，不然会死的很快。");
             SetLang("Achievements.BONED_Name", "骷髅之星星炮");
             SetLang("Achievements.BONED_Description", "打败骷髅王，这是个难的过分的Boss，不过手没了就好了，可以庄心躲骷髅，记得用星星炮，别说你没有史莱姆王。");
             SetLang("Achievements.OBTAIN_HAMMER_Name", "停！EZ时间到！");
             SetLang("Achievements.OBTAIN_HAMMER_Description", "制作一把实锤，并用它实锤Ningishu以获得金钱，知名度，热度。");
+            Main.instance.Window.Title = "实锤启用并加载此mod!不过mod确实已被你加载。(你或许没有加载？谁在乎呢)";
         }
         public override void PostUpdateEverything()
         {
         }
+
         public override void Unload()
         {
             base.Unload();

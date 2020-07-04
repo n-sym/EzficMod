@@ -1,9 +1,10 @@
 ﻿displayName = EzficMod
 author = E神真粉
-version = 0.1002
+version = 0.2001
 hideResources = true
 hideCode = true
 includeSource = false
 includePDB = false
-homepage = 
+side = NoSync
+homepage = https://space.bilibili.com/293962328
 buildIgnore = *.csproj, *.sln, obj\*, bin\*, *.suo, *.user, .git\*, .vs\*
